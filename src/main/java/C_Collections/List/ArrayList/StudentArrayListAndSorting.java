@@ -10,7 +10,6 @@ public class StudentArrayListAndSorting {
     private int rollNumber;
 
 
-
     public void setFirstName(String firstName) {
         FirstName = firstName;
     }
@@ -52,10 +51,6 @@ public class StudentArrayListAndSorting {
             this.rollNumber = rollNumber;
         }
 
-
-
-
-
         public static void main(String []args){
             StudentArrayListAndSorting student1 = new StudentArrayListAndSorting("Vishu2", "Chauhan7", 21, 12845);
             StudentArrayListAndSorting student2 = new StudentArrayListAndSorting("Vishu1", "Chauhan11", 2141, 124581);
@@ -63,16 +58,12 @@ public class StudentArrayListAndSorting {
             StudentArrayListAndSorting student4 = new StudentArrayListAndSorting("Vishu20", "Chauhan91", 2511, 124851);
             StudentArrayListAndSorting student5 = new StudentArrayListAndSorting("Vishu5", "Chauhan19", 2171, 812451);
 
-
-
-
             List<StudentArrayListAndSorting> list = Arrays.asList(student1,  student2, student3, student4, student5);
-            //Collections.sort(list, (o1, o2) -> o1.getFirstName().compareTo(o2.getFirstName()));
+            Collections.sort(list, Comparator.comparing(StudentArrayListAndSorting::getFirstName));
            // Collections.sort(list, );
 
              for(StudentArrayListAndSorting o : list){
                         System.out.println(o.getFirstName() + " " + o.getLastname() + " " + o.getAge() + " " + o.getRollNumber());
                     }
         }
-
 }

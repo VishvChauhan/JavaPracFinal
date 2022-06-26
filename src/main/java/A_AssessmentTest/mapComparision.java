@@ -6,8 +6,6 @@ import java.util.stream.Collectors;
 public class mapComparision {
 
 
-
-
     public static void main(String[] args) {
         // New HashMap1
         HashMap<Integer, String> map1 = new HashMap<>();
@@ -44,7 +42,6 @@ public class mapComparision {
         // Compare map1 and map3
         System.out.println("map1 == map3 : "
                 + hset.equals(hset2));
-
 
     }
 
